@@ -27,14 +27,14 @@ def ruse():
             req = requests.get(query)
             last_api_call_data['carlingford_nsw_au'] = req.text
 
-            return jsonify(req.text)
+            return req.text
         else:
-            return jsonify(last_api_call_data['carlingford_nsw_au'])
+            return last_api_call_data['carlingford_nsw_au']
     else:
         last_api_call['carlingford_nsw_au'] = time.time()
         req = requests.get(query)
         last_api_call_data['carlingford_nsw_au'] = req.text
-        return jsonify(req.text)
+        return req.text
 
 if __name__ == "__main__":
     print('Starting server')
