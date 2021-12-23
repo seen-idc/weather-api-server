@@ -1,7 +1,7 @@
 module.exports = {
     apps : [{
       name   : "weather-api",
-      script : "flask run",
+      script : "python3 ./app.py",
       env_production: {
         API_KEY: "api"
       },
