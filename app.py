@@ -35,7 +35,12 @@ def ruse():
 
             return response
         else:
-            return last_api_call_data['carlingford_nsw_au']
+            response = app.response_class(
+                response=last_api_call_data['carlingford_nsw_au'],
+                status=200,
+                mimetype='application/json'
+            )
+            return response
     else:
         last_api_call['carlingford_nsw_au'] = time.time()
         req = requests.get(query)
