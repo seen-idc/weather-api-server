@@ -37,4 +37,5 @@ def ruse():
         return jsonify(req.text)
 
 if __name__ == "__main__":
+    print('Starting server')
     serve(app, host="0.0.0.0", port=8000)
