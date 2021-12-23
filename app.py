@@ -3,6 +3,7 @@ import requests
 import os
 from flask import Flask, jsonify
 
+
 api_key = os.getenv('API_KEY')
 
 app = Flask(__name__)
