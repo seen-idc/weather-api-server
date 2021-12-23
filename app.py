@@ -2,7 +2,7 @@ import time
 import requests
 import os
 from flask import Flask, jsonify
-
+from waitress import serve
 
 api_key = os.getenv('API_KEY')
 
@@ -35,3 +35,6 @@ def ruse():
         req = requests.get(query)
         last_api_call_data['carlingford_nsw_au'] = req.text
         return jsonify(req.text)
+
+if __name__ == "__name__":
+    serve(app, host="0.0.0.0", port=8080)
