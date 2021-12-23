@@ -36,5 +36,5 @@ def ruse():
         last_api_call_data['carlingford_nsw_au'] = req.text
         return jsonify(req.text)
 
-if __name__ == "__name__":
-    serve(app, host="0.0.0.0", port=8080)
+if __name__ == "__main__":
+    serve(app, host="0.0.0.0", port=8000)
